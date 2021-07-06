@@ -1,173 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
 </head>
+
 <body>
-    <!--bảng đầu tiên nhập số liệu-->        
-        <!--tạo bảng 1-->
-        <table class="table table-striped table-bordered">
-            <tbody>
-                <!--trên 1 hàng chia làm mấy cột-->
-                <!--first-->
-              <tr>
+    <!--bảng đầu tiên nhập số liệu-->
+    <!--tạo bảng 1-->
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <!--trên 1 hàng chia làm mấy cột-->
+            <!--first-->
+            <tr>
                 <td>Số tiền vay</td>
                 <td>
                     <input name="money" type="number" id="money"> VND
                 </td>
-              </tr>
-               <!--second-->
-              <tr>
+            </tr>
+            <!--second-->
+            <tr>
                 <td>Thời gian vay</td>
                 <td>
                     <input name="month" type="number" id="month"> tháng
                 </td>
-              </tr>
-             <!--third-->
-              <tr>
+            </tr>
+            <!--third-->
+            <tr>
                 <td>Lãi suất</td>
                 <td>
                     <input name="interest" type="number" id="interest"> % năm
                 </td>
-              </tr>
-              <!--fourth-->
-              <tr>
-                  <td>Ngày giải ngân</td>
-                  <td>
-                      <input name="date" type="date" id="date"> 
-                  </td>
-              </tr>
-              <!--fifth-->
-              <tr>
-                  <!--cột giả-->
-                  <td></td>
-                  <td>
-                      <button onclick="tinhTien()" type="button" class="btn btn-danger" style="padding: 0.3rem 2rem;">TÍNH</button>
-                  </td>
-              </tr>
-            </tbody>
-          </table>
-          <br>
-          <!--tạo bảng 2-->
-          <table class="table table-striped table-bordered">
-              <tbody>
-                  <!--tạo hàng có chữ in đậm-->
-                  <thead>
-                      <th>Kì trả nợ</th>
-                      <th>Số gốc còn lại</th>
-                      <th>Gốc</th>
-                      <th>Lãi</th>
-                      <th>Tổng gốc + Lãi</th>
-                  </thead>
-  
-                  <tr>
-                      <td id="times"></td>
-                      <td id="conlai"></td>
-                      <td id="goc"></td>
-                      <td id="lai"></td>
-                      <td id="goclai"></td>
-                  </tr>
+            </tr>
+            <!--fourth-->
+            <tr>
+                <td>Ngày giải ngân</td>
+                <td>
+                    <input name="date" type="date" id="date">
+                </td>
+            </tr>
+            <!--fifth-->
+            <tr>
+                <!--cột giả-->
+                <td></td>
+                <td>
+                    <button onclick="tinhTien()" type="button" class="btn btn-danger" style="padding: 0.3rem 2rem;">TÍNH</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <!--tạo bảng 2-->
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <!--tạo hàng có chữ in đậm-->
+            <thead>
+                <th>Kì trả nợ</th>
+                <th>Số gốc còn lại</th>
+                <th>Gốc</th>
+                <th>Lãi</th>
+                <th>Tổng gốc + Lãi</th>
+            </thead>
 
-                  <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-                <tr>
-                    <td id="times"></td>
-                    <td id="conlai"></td>
-                    <td id="goc"></td>
-                    <td id="lai"></td>
-                    <td id="goclai"></td>
-                </tr>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
 
-              </tbody>
-          </table>
-<script src="tinhLai.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+            <tr>
+                <td id="times"></td>
+                <td id="conlai"></td>
+                <td id="goc"></td>
+                <td id="lai"></td>
+                <td id="goclai"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+        function tinhTien() {
+            var tienVay = document.getElementById("money").value;
+            soThang = document.getElementById("month").value;
+            laiSuat = document.getElementById("interest").value;
+            ngayGiaiNgan = document.getElementById("date").value;
+
+            //tiền gốc không đổi
+            tienGoc = tienVay / soThang;
+            for (let i = 1; i <= soThang; i++) {
+                tienLai = tienVay * (laiSuat / 12 / 100);
+                tienPhaiTra = tienGoc + tienLai;
+                gocCon = tienVay - tienGoc;
+                document.writeln("Tháng thứ " + i + '\n')
+                document.writeln("Tiền gốc phải trả: " + tienGoc.toFixed(3));
+                document.writeln("Tiền lãi phải trả: " + (Math.round(tienLai * 1000) / 1000));
+                document.writeln("Tiền phải trả hằng tháng: " + (Math.round((tienPhaiTra) * 1000) / 1000));
+                document.writeln("Tiền gốc còn lại: " + Math.round((gocCon) * 1000) / 1000);
+
+                tienVay -= tienGoc;
+            }
+
+        }
+    </script>
 </body>
+
 </html>
